@@ -54,7 +54,6 @@ function startAnimation(){
             trigger: '.parent',
             start: 'top top',
             end: 'bottom bottom',
-            markers: true,
             scrub: 4,
         }
     });
