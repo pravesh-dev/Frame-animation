@@ -16,7 +16,7 @@ function preloader (){
             imgLoaded++;
             if(imgLoaded === frames.maxIndex){
                 loadImage(frames.currentIndex);
-                animation();
+                startAnimation();
             }
         }
         images.push(img);
@@ -32,7 +32,6 @@ function loadImage(index){
 
         const scaleX = canvas.width / img.width;
         const scaleY = canvas.height / img.height;
-
         const scale = Math.max(scaleX, scaleY);
 
         const newWidth = img.width * scale;
@@ -49,7 +48,7 @@ function loadImage(index){
     }
 };
 
-function animation(){
+function startAnimation(){
     let tl = gsap.timeline({
         scrollTrigger: {
             trigger: '.parent',
